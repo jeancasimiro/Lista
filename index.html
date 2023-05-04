@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício módulo 10</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <header>
+        <h1>Cadastro</h1>
+    </header>
+    <form>
+        <div id="container">
+            <h2>Digite suas informações:</h2>
+            <div id="form-campo">
+                <label for="nome">Nome completo:</label>
+                <input type="text" id="nome" name="nome">
+            </div>
+            <div>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div id="form-campo">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone">
+            </div>
+            <div id="form-campo">
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf">
+            </div>
+            <div id="form-campo">
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco">
+            </div>
+            <div id="form-campo">
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep">
+            </div>
+        </div>
+        <button type="submit">Enviar</button>
+    </form>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="./js/jquery.mask.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#telefone').mask('(00) 00000-0000')
+
+            $('#cpf').mask('000.000.000-00')
+
+            $('#cep').mask('00000-000')
+        })
+    </script>
+</body>
+</html>
